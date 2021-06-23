@@ -1,6 +1,7 @@
 # Script guided_mode.py serves primarily as a template. 
 # It is useful when I want to make script in GUIDED mode. 
 # It contains all the functions that can be used in GUIDED mode, so anyone can choose and combine functions wanted.
+# It also uses python-picamera to record a video to a file.
  
 
 
