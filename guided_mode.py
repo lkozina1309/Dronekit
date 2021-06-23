@@ -9,6 +9,7 @@ from __future__ import print_function
 import time
 from dronekit import connect, VehicleMode, LocationGlobal, LocationGlobalRelative
 from pymavlink import mavutil
+import picamera
 
 vehicle = connect('127.0.0.1:14550', wait_ready=True, baud=57600)
 
@@ -109,6 +110,11 @@ def global_velocity(velocity_x, velocity_y, velocity_z, duration):
 	for x in range(0,duration):
 		vehicle.send_mavlink(msg)
 		time.sleep(1)
+		
+camera = picamera.PiCamera()
+camera.resolution = (640, 480)
+camera.start_recording('my_video.h264')
+camera.wait_recording(300)
 
 
 
@@ -126,3 +132,4 @@ yaw(90,relative=True)
 velocity(0,10,0,50)
 
 vehicle.mode    = VehicleMode("RTL")
+camera.stop_recording()
