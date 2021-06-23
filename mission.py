@@ -1,4 +1,5 @@
 # This is script with autonomous mission. It uses GUIDED mode to takeoff and then switches to AUTO mode and executing a mission.
+# It also uses python-picamera to record a video to a file.
 
 from __future__ import print_function
 
@@ -6,6 +7,7 @@ from dronekit import connect, VehicleMode, LocationGlobalRelative, LocationGloba
 import time
 import math
 from pymavlink import mavutil
+import picamera
 
 vehicle = connect('127.0.0.1:14550', wait_ready=True, baud=57600)
 
@@ -79,8 +81,15 @@ cmds.add(cmd6)
 
 vehicle.commands.upload()
 
+camera = picamera.PiCamera()
+camera.resolution = (640, 480)
+camera.start_recording('my_video.h264')
+camera.wait_recording(300)
+
 arm_and_takeoff(15)
 
 vehicle.mode = VehicleMode("AUTO")
 while vehicle.mode!="AUTO":
 	time.sleep(.2)
+
+camera.stop_recording()
