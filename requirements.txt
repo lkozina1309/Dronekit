@@ -1,0 +1,12 @@
+# Script requirements.txt shows requirements for using Dronekit repository and how to install it.
+
+
+
+
+PIP INSTALLATION:
+
+sudo apt-get install python-pip python-dev
+
+DRONEKIT INSTALLATION:
+
+sudo pip install dronekit
