@@ -1,6 +1,6 @@
 # Dronekit
 
-Dronekit is a library with my scripts containing a code for my drones. I'm using python-dronekit and python-picamera for aerial photography as I use Raspberry Pi 4 as a companion computer. 
+Dronekit is a library with my scripts containing a code for my drones. 
 
 There are 2 simple simple scripts, just for testing connection, takeoff and landing and 2 template scripts I use to choose certain functions and coordinates to make useful scripts.  
 
