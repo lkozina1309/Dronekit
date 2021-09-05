@@ -12,7 +12,7 @@ from dronekit import connect, VehicleMode, LocationGlobal, LocationGlobalRelativ
 from pymavlink import mavutil
 
 
-vehicle = connect('127.0.0.1:14550', wait_ready=True, baud=57600)
+vehicle = connect('/dev/ttyAMA0', wait_ready=True, baud=57600)
 
 
 print ("Global Location: %s" % vehicle.location.global_frame)
