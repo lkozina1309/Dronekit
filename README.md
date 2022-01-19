@@ -7,7 +7,6 @@ Templates for autonomous drone flights using velocities, local positioning or gl
 
 ### Prerequisites
 
-What things you need to install the software and how to install them
 
 ```
 Python
