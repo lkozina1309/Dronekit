@@ -54,6 +54,8 @@ def arm_and_takeoff(altitude):
 			break
 		time.sleep(1)
 
+while (vehicle.mode != VehicleMode("GUIDED")):
+	print("Waiting for GUIDED mode")  
+		  
 arm_and_takeoff(10)
-
 vehicle.mode    = VehicleMode("LAND")  
