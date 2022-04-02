@@ -1,5 +1,4 @@
 # This is script with autonomous mission. It uses GUIDED mode to takeoff and then switches to AUTO mode and executing a mission.
-# It also uses python-picamera to record a video to a file.
 
 from __future__ import print_function
 
@@ -80,6 +79,10 @@ cmds.add(cmd5)
 cmds.add(cmd6)
 
 vehicle.commands.upload()
+
+while (vehicle.mode != VehicleMode("GUIDED")):
+    print("Waiting for GUIDED mode") 
+    time.sleep(2)
 
 arm_and_takeoff(15)
 
