@@ -5,7 +5,7 @@ import time
 import math
 from pymavlink import mavutil
 
-vehicle = connect('127.0.0.1:14550', wait_ready=True, baud=57600)
+vehicle = connect('/dev/ttyAMA0', wait_ready=True, baud=57600)
 
 print ("Global Location: %s" % vehicle.location.global_frame)
 print ("Global Location (relative altitude): %s" % vehicle.location.global_relative_frame)
