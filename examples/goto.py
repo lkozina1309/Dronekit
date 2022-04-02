@@ -68,7 +68,7 @@ def goto(targetLocation):
 		time.sleep(1)
 	return None
 
-loc = [LocationGlobalRelative(45.501044, 18.099386, 10), LocationGlobalRelative(45.501206, 18.099816, 10), LocationGlobalRelative(45.500984, 18.099945, 10), LocationGlobalRelative(45.500890, 18.099586 10)]
+loc = [LocationGlobalRelative(45.501044, 18.099386, 10), LocationGlobalRelative(45.501206, 18.099816, 10), LocationGlobalRelative(45.500984, 18.099945, 10), LocationGlobalRelative(45.500890, 18.099586, 10)]
 
 		
 while (vehicle.mode != VehicleMode("GUIDED")):
