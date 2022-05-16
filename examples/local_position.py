@@ -85,7 +85,7 @@ def condition_yaw(degrees,relative):
 
 		
     
-arm_and_takeoff(1)
+arm_and_takeoff(10)
 
 condition_yaw(30,1) ##180 -->> 210
 print("Yawing 30 degrees relative to current position")
