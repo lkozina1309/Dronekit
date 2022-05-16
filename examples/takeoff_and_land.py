@@ -52,10 +52,7 @@ def arm_and_takeoff(altitude):
 		if vehicle.location.global_relative_frame.alt>=altitude*0.95:
 			print ("Reached target altitude")
 			break
-		time.sleep(1)
-
-while (vehicle.mode != VehicleMode("GUIDED")):
-	print("Waiting for GUIDED mode")  
+		time.sleep(1) 
 		  
 arm_and_takeoff(10)
 vehicle.mode    = VehicleMode("LAND")  
