@@ -84,11 +84,8 @@ def condition_yaw(degrees,relative):
 	vehicle.flush()
 
 		
-while (vehicle.mode != VehicleMode("GUIDED")):
-    print("Waiting for GUIDED mode") 
-    time.sleep(2)
     
-arm_and_takeoff(10)
+arm_and_takeoff(1)
 
 condition_yaw(30,1) ##180 -->> 210
 print("Yawing 30 degrees relative to current position")
