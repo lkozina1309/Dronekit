@@ -34,6 +34,7 @@ def arm_and_takeoff(altitude):
         	time.sleep(1)
         
 	print ("Arming motors")
+	vehicle.mode = VehicleMode("GUIDED")
 	vehicle.armed = True
 	
 	while not vehicle.armed:
